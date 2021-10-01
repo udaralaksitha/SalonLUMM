@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".DisplayAppointment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/view_booking_heading"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Booking History"
+        android:textColor="@color/green2"
+        android:textSize="34sp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_booking_heading"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="@color/blue5"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <!-- card-view widget -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="161dp">
+
+
+            <TextView
+                android:id="@+id/datevalue"
+                android:layout_width="113dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/appointment_for_topic"
+                android:layout_width="113dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/datevalue"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="18dp"
+                android:drawablePadding="2dp"
+                android:fontFamily="@font/asap_medium"
+                android:text="Appointment For:" />
+
+            <TextView
+                android:id="@+id/branch_topic"
+                android:layout_width="113dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/appointment_for_topic"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="18dp"
+                android:drawablePadding="2dp"
+                android:fontFamily="@font/asap_medium"
+                android:text="Branch" />
+
+
+            <TextView
+                android:id="@+id/time_value"
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/asap_bold"
+                 />
+
+            <TextView
+                android:id="@+id/appointment_for_value"
+                android:layout_width="144dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/time_value"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="38dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="8dp"
+                android:layout_toEndOf="@+id/appointment_for_topic"
+                android:fontFamily="@font/asap_bold"
+                 />
+
+            <TextView
+                android:id="@+id/branch_value"
+                android:layout_width="77dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appointment_for_value"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="113dp"
+                android:layout_toEndOf="@+id/branch_topic"
+                android:fontFamily="@font/asap_bold"
+                 />
+
+
+            <Button
+                android:id="@+id/weditbtn"
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/time_value"
+                android:layout_marginStart="258dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/d_yellow"
+                android:fontFamily="@font/asap"
+                android:text="Edit"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                app:cornerRadius="23dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/wdeletebtn"
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/weditbtn"
+                android:layout_marginStart="258dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/d_red1"
+                android:fontFamily="@font/asap"
+                android:text="Delete"
+                android:textColor="@color/white"
+                android:textSize="11dp"
+                app:cornerRadius="23dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="156dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="24dp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/add_bookingBtn"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="325dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/grey4dark"
+        android:text="+"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</RelativeLayout>
+
